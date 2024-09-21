@@ -491,6 +491,13 @@ if SERVER then
 		return phys:GetDamping()
 	end
 
+	--- Returns the contents flag of the physobject
+	-- @return number The CONTENTS enum
+	function physobj_methods:getContents()
+		local phys = unwrap(self)
+		return phys:GetContents()
+	end
+
 	--- Sets the movement damping of the bone. Unlike air drag, it doesn't take into account the cross-section of the object.
 	-- @param number linear Number of the linear damping
 	-- @param number angular Number of the angular damping
